@@ -122,7 +122,7 @@ document.querySelector('.b-8').onclick = f8;
 
 function f9() {
   let num = +document.querySelector('.i-9').value;
-  if (num > 1 && num <= 32) {
+  if (num >= 1 && num <= 32) {
     document.querySelector('.out-9').textContent = 1;
   } else if (num > 32 && num <= 43) {
     document.querySelector('.out-9').textContent = 2;
@@ -205,23 +205,19 @@ document.querySelector('.b-14').onclick = f14;
 // Task     15
 // Дан select .s-151 и .s-152, каждый из которых содержит 1 и 0.  Дан select .s-153, который содержит две операции - && и || . Дана кнопка .b-15, при нажатии на которую срабатывает функция f15. Функция выводит в .out-15 результат логических операций выбранных в 3 select к числам выбранным в первом и втором select. Например выбрано 1 1 &&, нужно вывести результат операции 1&&1 т.е. 1 или 0.
 
-// function f15() {
-//   let sign = document.querySelector('.s-153').value;
-//   let a = document.querySelector('.s-151').value;
-//   let b = document.querySelector('.s-152').value;
-//   document.querySelector('.out-15').textContent = `${a}${sign}${b}`;
-// }
-
 function f15() {
   let sign = document.querySelector('.s-153').value;
-  let a = document.querySelector('.s-151').value;
-  let b = document.querySelector('.s-152').value;
+  let a = +document.querySelector('.s-151').value;
+  let b = +document.querySelector('.s-152').value;
+  let result;
   switch (sign) {
     case '&&':
-      document.querySelector('.out-15').textContent = a + sign + b;
+      result = a && b;
+      document.querySelector('.out-15').textContent = result;
       break;
     case '||':
-      document.querySelector('.out-15').textContent = a + sign + b;
+      result = a || b;
+      document.querySelector('.out-15').textContent = result;
       break;
   }
 }
