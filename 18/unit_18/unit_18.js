@@ -99,7 +99,7 @@ document.querySelector('.b-7').onclick = t7;
 
 function t8() {
   let a8 = [1, 2, 66, 77, 15];
-  a8_res = a8.join(",");
+  a8_res = a8.join("-");
   document.querySelector('.out-8').textContent = a8_res;
 }
 
@@ -111,7 +111,7 @@ document.querySelector('.b-8').onclick = t8;
 
 function t9() {
   const a9 = [['hi', 'mahai'], ['test', 'best']];
-  let a9_res = a9.join().split(",").join('-');
+  a9_res = a9.join().split(",").join('-');
   document.querySelector('.out-9').textContent = a9_res;
 }
 
@@ -125,7 +125,7 @@ function t10() {
   let a10 = { name: 'ivan', age: 15, sex: 1, id: 45 };
   a10_res = "?";
   for (const key in a10) {
-    a10_res += `${key}=${a10[key]}&amp;`;
+    a10_res += `${key}=${a10[key]}&`;
   }
   document.querySelector('.out-10').innerHTML = a10_res;
 }
