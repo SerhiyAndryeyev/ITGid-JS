@@ -143,7 +143,6 @@ document.querySelector('.b-9').addEventListener('click', t9);
 
 // Task 10 ============================================
 /*  Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Если все сделано верно, сервер пришлет строку hello. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-10 результат. Запускаться функция должна по нажатию b-10.
-
 */
 
 function t10() {
@@ -323,4 +322,3 @@ function t18() {
 }
 
 document.querySelector('.b-18').addEventListener('click', t18);
-
